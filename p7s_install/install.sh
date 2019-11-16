@@ -28,7 +28,8 @@ mv templates/welcome.html /usr/share/nginx/html/templates/welcome.html
 
 # 删除没用的文件
 rm p7s.zip
-rm -rf __MAXOSX
+rm p7s_local.py
+rm -rf __MACOSX
 rm -rf templates
 
 # 创建虚拟环境 p7s_env 
@@ -43,7 +44,10 @@ pip install -U gunicorn flask youtube-dl
 cat > /etc/nginx/sites-available/default << EOF
 server {
     listen 80;
+    # listen 443 ssl;
     server_name 0.0.0.0;
+    # ssl_certificate /etc/letsencrypt/live/xxxx/fullchain.pem;
+    # ssl_certificate_key /etc/letsencrypt/live/xxxx/privkey.pem;
     location / {
         proxy_pass http://127.0.0.1:4321;
         proxy_set_header Host \$host;

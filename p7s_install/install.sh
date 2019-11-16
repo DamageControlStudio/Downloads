@@ -54,4 +54,6 @@ EOF
 
 # 初始化 p7s
 python p7s_init.py
+
+# 给权限
 chmod -R 777 /usr/share/nginx/html

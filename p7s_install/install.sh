@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# 安装必要环境
+apt-get update
+apt-get install nginx python-virtualenv ffmpeg unzip
+
 # 解压安装包
 unzip -q p7s.zip
 
@@ -7,10 +11,6 @@ unzip -q p7s.zip
 rm /usr/share/nginx/html/p7s_sqlite.db
 rm -rf /usr/share/nginx/html/files
 rm -rf /usr/share/nginx/html/p7s_env
-
-# 安装必要环境
-apt-get update
-apt-get install nginx python-virtualenv ffmpeg
 
 # 创建工作文件夹
 mkdir /usr/share/nginx/html/templates
@@ -57,7 +57,7 @@ server {
 EOF
 
 # 初始化 p7s
-python p7s_init.py
+python /usr/share/nginx/html/p7s_init.py
 
 # 给权限
 chmod -R 777 /usr/share/nginx/html

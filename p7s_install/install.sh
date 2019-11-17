@@ -23,6 +23,7 @@ mv p7s_main.py /usr/share/nginx/html/p7s_main.py
 mv p7s_download.py /usr/share/nginx/html/p7s_download.py
 mv p7s_utils.py /usr/share/nginx/html/p7s_utils.py
 mv p7s_startup.sh /usr/share/nginx/html/p7s_startup.sh
+mv p7s_cronclean.sh /usr/share/nginx/html/p7s_cronclean.sh
 mv templates/status.html /usr/share/nginx/html/templates/status.html
 mv templates/welcome.html /usr/share/nginx/html/templates/welcome.html
 

@@ -3,6 +3,7 @@
 确保服务器时间准确  
 
 wget https://github.com/DamageControlStudio/Downloads/raw/master/p7s_install/p7s.zip  
+unzip -q p7s.zip  
 sudo /bin/bash install.sh  
 
 crontab -e  

@@ -4,7 +4,7 @@
 
 wget https://github.com/DamageControlStudio/Downloads/raw/master/p7s_install/p7s.zip  
 unzip -q p7s.zip  
-sudo /bin/bash install.sh  
+sudo /bin/bash p7s_install.sh  
 
 crontab -e  
 - @reboot /bin/bash /usr/share/nginx/html/p7s_startup.sh  
